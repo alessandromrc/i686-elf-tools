@@ -129,13 +129,6 @@ No. But you can try. I got all sorts of crazy errors I was simply unable to reso
 * Executables had dependencies on MinGW/Cygwin libraries (most likely as I just didn't know how to statically link)
 * GDB would randomly quit whenever I tried to type a command
 
-YMMV.
-
-### Can I use `$DISTRO` instead of Debian?
-I originally tried to use CentOS 7 64-bit, however along the way I encountered various issues potentially attributable to bitness, resulting in my switching to a 32-bit OS to simplify troubleshooting. CentOS 7 32-bit _cannot_ be used, as all the packages required by MXE are not available on yum.
-
-If you are determined not to use Debian (or another Debian derivitive), please see the [prerequisites for MXE](http://mxe.cc/#requirements). Note: you may need additional packages to these to successfully compile gcc, e.g. _texinfo_, _readline-devel_, etc. Google any error messages you get to reveal the appropriate package you need to install.
-
 ### When running these steps manually and running `make` for binutils I get an error _GCC_NO_EXECUTABLES_
 The path to the compiler specified as `--host` to `configure` cannot be found on your `PATH`. (i.e. if you're compiling for Windows, check that `/opt/mxe/usr/bin` is present). Update your `.bashrc` and login/logout.
 
