@@ -125,9 +125,7 @@ After copying `i686-elf-tools-windows.zip` to your PC, all necessary programs ca
 Seems so! For more information see the section *How on earth did you compile libgcc?* below.
 
 ### Can I use MSYS/MSYS2/MinGW/MinGW/MinGW-w32/MinGW-w64/Cygwin, etc to do this?
-No. But you can try. I got all sorts of crazy errors I was simply unable to resolve when I was looking at solutions to compile these tools. I have successfully compiled on Windows in the past, however there have been two issues with this:
-* Executables had dependencies on MinGW/Cygwin libraries (most likely as I just didn't know how to statically link)
-* GDB would randomly quit whenever I tried to type a command
+Yes, it does work on every platform. 
 
 ### When running these steps manually and running `make` for binutils I get an error _GCC_NO_EXECUTABLES_
 The path to the compiler specified as `--host` to `configure` cannot be found on your `PATH`. (i.e. if you're compiling for Windows, check that `/opt/mxe/usr/bin` is present). Update your `.bashrc` and login/logout.
